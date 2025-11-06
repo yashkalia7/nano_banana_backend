@@ -262,12 +262,9 @@ async def apply_acp_single_prompt(wall_image: UploadFile = File(...), acp_sheet_
         
     return {"error": "Could not generate the image."}
 
-
 if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8000))
     print("🚀 Starting FastAPI server...")
-    print("📍 Access the application at: http://localhost:8000")
-    print("📍 API Documentation: http://localhost:8000/docs")
-    print("📍 Two-step endpoint (more accurate): http://localhost:8000/apply_acp")
-    print("📍 Single-step endpoint (faster): http://localhost:8000/apply_acp_single")
-    print("❌ Press CTRL+C to stop the server")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    print(f"📍 Port: {port}")
+    uvicorn.run(app, host="0.0.0.0", port=port)

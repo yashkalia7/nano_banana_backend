@@ -4,7 +4,3 @@ python-multipart==0.0.6
 pillow==10.1.0
 python-dotenv==1.0.0
 google-generativeai==0.3.2
-
-git config --global --unset user.name
-git config --global user.name "yashkalia7"
-git config --global user.email "yash.kalia@choicetechlab.com"
